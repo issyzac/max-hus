@@ -79,7 +79,7 @@
                         <h4>NO 1A,Juwata Area C Dodoma</h4>
                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
                             Donec id elit non mi porta gravida at eget metus.
-                            <a href="./sale_prop_detail1" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a> </p>
+                            <a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@
         				<h4>NO 1A,Juwata Area C Dodoma</h4>
         				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
         	 				Donec id elit non mi porta gravida at eget metus. 
-        					<a href="./sale_prop_detail1" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a> </p>
+        					<a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
       				</div>
     			</div>
   			</div>
@@ -112,7 +112,7 @@
         				<p style="color: gray" >
         				    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
         	 				Donec id elit non mi porta gravida at eget metus. 
-        					<a href="./rent_prop_detail1" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
+        					<a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
         			    </p>
 
       				</div>
@@ -129,7 +129,7 @@
         				<h4>NO 2B,Juwata Area C Dodoma</h4>
         				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
         	 				Donec id elit non mi porta gravida at eget metus. 
-        					<a href="./rent_prop_detail1" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a> </p>
+        					<a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
       				</div>
     			</div>
   			</div>
@@ -161,7 +161,7 @@
         				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
         	 				Donec id elit non mi porta gravida at eget metus.
 
-        	 				<a href="./sale_prop_detail1" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
+        	 				<a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
         				</p>
       				</div>
     			</div>

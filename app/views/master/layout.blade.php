@@ -8,9 +8,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Referencing Bootstrap CSS that is hosted locally -->
     	{{ HTML::style('css/bootstrap.min.css') }}
+
+    	 <link href="{{ asset('assets/advanced-datatable/media/css/demo_page.css') }}" rel="stylesheet">
+         <link href="{{ asset('assets/advanced-datatable/media/css/demo_table.css') }}" rel="stylesheet">
+         <link href="{{ asset('assets/data-tables/DT_bootstrap.css') }}" rel="stylesheet">
     	
    
     	<link rel="stylesheet" href="" >
+
+    	<script src="{{ asset('js/jquery.js') }}"></script>
       
 </head>
 <header>
@@ -32,7 +38,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 
-			    <li class="active"><a href="{{ url('etherpad') }}">Etherpad</a></li>
+			    <li><a href="{{ url('etherpad') }}">Etherpad</a></li>
 
 				<li class="active"><a href="{{ url('home') }}">Home</a></li>
 
@@ -112,6 +118,22 @@
 	
 	</nav>
 
+	<div class="container" style="height: 30px; background-color: white; margin-top: 0px; margin-bottom: 30px">
+
+	    <ul class="nav navbar-nav navbar-right">
+
+	        <a class="btn btn-success"><i class="glyphicon glyphicon-user"> </i> users </a>
+
+	        <a href="{{ url('list_objects') }}" class="btn btn-success"><i class="glyphicon glyphicon-list"> </i> list </a>
+
+	        <a href="{{ url('addnew') }}" class="btn btn-success"><i class="glyphicon glyphicon-plus-sign"> </i> New </a>
+
+	    </ul>
+
+	</div>
+
+	<!-- <hr style="margin-left: 50px; margin-right: 50px "/> -->
+
 </header>
 
 
@@ -125,10 +147,10 @@
 
     <div class="col-md-3">
                 <div class="panel-heading">
-                    <h4 style="color: #ffffff"><b>About Us</b></h4>
+                    <h4 style="color: gray"><b>About Us</b></h4>
                 </div>
                 <div class="panel-body">
-                    <p style="color: #ffffff">
+                    <p style="color: gray">
                         we are the best in selling houses,we provide the best services....Look at our Latest
                         listed properties and check out the facilities on them, We have already sold more than
                         5,000 Homes and we are still going at very good pace. We would love you to look into
@@ -138,10 +160,10 @@
 
         <div class="col-md-3">
             <div class="panel-heading">
-                <h4 style="color: #ffffff"><b>About Us</b></h4>
+                <h4 style="color: gray "><b>About Us</b></h4>
             </div>
             <div class="panel-body">
-                <p style="color: #ffffff">
+                <p style="color: gray">
                     we are the best in selling houses,we provide the best services....Look at our Latest
                     listed properties and check out the facilities on them, We have already sold more than
                     5,000 Homes and we are still going at very good pace. We would love you to look into
@@ -150,10 +172,10 @@
         </div>
         <div class="col-md-3">
             <div class="panel-heading">
-                <h4 style="color: #ffffff"><b>Recent Posts</b></h4>
+                <h4 style="color: gray"><b>Recent Posts</b></h4>
             </div>
             <div class="panel-body">
-                <ul class="list-unstyled" style="color: #ffffff" >
+                <ul class="list-unstyled" style="color: gray" >
                     <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span>   House No.3B, Juwata Area C </li>
                     <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span>   House No.2B, Juwata Area A </li>
                     <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span>   House No.4B, Juwata Area B </li>
@@ -165,10 +187,10 @@
         </div>
         <div class="col-md-3">
             <div class="panel-heading">
-                <h4 style="color: #ffffff"><b>Contact Us</b></h4>
+                <h4 style="color: gray"><b>Contact Us</b></h4>
             </div>
             <div class="panel-body">
-                    <address style="color: #ffffff">
+                    <address style="color: gray">
                         <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>1005 Gravenstein HWY North,<br>
                         Sebastopol, CA 95472<br>
                         <span class="glyphicon glyphicon-phone-alt" aria-hidden="true">  Phone: 1-800-555-1234</span><br>
@@ -179,8 +201,8 @@
             </div>
         </div>
     </div>
-    <hr/>        
-        <p class="text-center" style="color: #ffffff">Copyright &copy; 2014 Max-Hus Sverige </p>
+    <hr/>
+        <p class="text-center" style="color: gray">Copyright &copy; 2014 Max-Hus Sverige </p>
 </div>
 </div>
     

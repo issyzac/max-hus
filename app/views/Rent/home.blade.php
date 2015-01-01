@@ -185,33 +185,40 @@
     </div>
     <div class="col-md-4 pull-right"><h3>Featured Properties</h3><hr/>
       <div class="thumbnail">
-              <img src="img/one.jpg" alt=" ">
+
+      <H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Rent </H4>
+
+              <img src="img/one.jpg" alt=" " style="margin-top: 10px">
               <div class="caption">
                 <h3>NO 2A,Juwata Area C Dodoma</h3>
                 <p>Cras justo odio, dapibus ac facilisis in,egestas eget quam.
                   Donec id elit non mi porta gravida at eget metus. 
-                  <a href="#" > More Details >> </a> </p>
-                <p><button type="button" class="btn btn-danger" disabled="disabled">For Rent</button></p>
+                  <a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
               </div>
       </div>
       <div class="thumbnail">
-              <img src="img/2.jpg" alt=" ">
+
+       <H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Sale </H4>
+
+              <img src="img/2.jpg" alt=" " style="margin-top: 10px">
               <div class="caption">
                 <h3>NO 1A,Juwata Area C Dodoma</h3>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. 
-                  <a href="#" > More Details >> </a> </p>
-                <p><p><button type="button" class="btn btn-danger" disabled="disabled">For Sale</button></p></p>
+                  Donec id elit non mi porta gravida at eget metus.
+                  <a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
               </div>
           </div>
+
       <div class="thumbnail">
-              <img src="img/3.jpg" alt=" ">
+
+       <H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Rent </H4>
+
+              <img src="img/3.jpg" alt=" " style="margin-top: 10px">
               <div class="caption">
                 <h3>NO 1B,Juwata Area C Dodoma</h3>
                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. 
-                  <a href="#" > More Details >> </a> </p>
-                <p><p><button type="button" class="btn btn-danger" disabled="disabled">For Rent</button></p></p>
+                  Donec id elit non mi porta gravida at eget metus.
+                  <a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
               </div>
           </div>
     </div>

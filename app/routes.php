@@ -26,6 +26,11 @@ Route::get('home/', function()
     return View::make('home');
 });
 
+Route::get('list_objects', function()
+{
+    return View::make('objects.index');
+});
+
 Route::get('/types', function()
 {
 	return View::make('home');
@@ -38,30 +43,49 @@ Route::get('/forsale', function()
 {
 	return View::make('sale');
 });
+
+
+/**
+ * Object Routes starts here
+ */
+
+Route::get('rental', array('uses' => 'ObjectController@rentalObject'));
+Route::get('sale', array('uses' => 'ObjectController@sale'));
+Route::get('list_objects', array('uses' => 'ObjectController@listObjects'));
+Route::get('addnew', array('uses' => 'ObjectController@create'));
+Route::post('addnew', array('uses' => 'ObjectController@store'));
+
+
 Route::get('/login', function()
 {
 	return View::make('login');
 });
+
 Route::get('/single-family', function()
 {
 	return View::make('singlefam');
 });
+
 Route::get('/apartment-building', function()
 {
 	return View::make('apabuilding');
 });
+
 Route::get('/apartment', function()
 {
 	return View::make('apartment');
 });
+
 Route::get('/shop', function()
 {
 	return View::make('shop');
 });
+
 Route::get('/villa', function()
 {
 	return View::make('villa');
 });
+
 Route::get('/office', function()
 {
 	return View::make('office');
@@ -73,51 +97,4 @@ Route::get('/contactus', function()
 	return View::make('contact');
 });
 
-Route::get('/rent_prop_detail1', function()
-{
-	return View::make('rent_prop_detail1');
-});
-Route::get('rental', function()
-{
-	return View::make('Rent.home');
-});
-Route::get('/rent_prop_detail3', function()
-{
-	return View::make('rent_prop_detail3');
-});
-Route::get('/rent_prop_detail4', function()
-{
-	return View::make('rent_prop_detail4');
-});
-Route::get('/rent_prop_detail5', function()
-{
-	return View::make('rent_prop_detail5');
-});
-Route::get('/rent_prop_detail6', function()
-{
-	return View::make('rent_prop_detail6');
-});
-Route::get('/sale_prop_detail1', function()
-{
-	return View::make('sale_prop_detail1');
-});
-Route::get('/sale_prop_detail2', function()
-{
-	return View::make('sale_prop_detail2');
-});
-Route::get('/sale_prop_detail3', function()
-{
-	return View::make('sale_prop_detail3');
-});
-Route::get('/sale_prop_detail4', function()
-{
-	return View::make('sale_prop_detail4');
-});
-Route::get('/sale_prop_detail5', function()
-{
-	return View::make('sale_prop_detail5');
-});
-Route::get('/sale_prop_detail6', function()
-{
-	return View::make('sale_prop_detail6');
-});
+
