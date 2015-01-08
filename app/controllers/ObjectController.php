@@ -74,11 +74,23 @@ class ObjectController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+
+
+        // Get the image to store in the database
+        $image = Input::file('file-1');
+
+        // Get the Image name
+        $filename = str_random(12).'_'.$image->getClientOriginalName();
+
+        $uploadSuccess = $image->move( public_path().'/assets/images/', $filename);
+
+        $imageUrl = '/assets/images/' . $filename;
+
+
         $newObject = Object::create(array(
             'type' => Input::get('type'),
             'description' => Input::get('description'),
-            'ImagesUrl' => 'noUrl',
+            'ImagesUrl' => $imageUrl,
             'Ac' => Input::get('Ac'),
             'acres_source' => Input::get('acres_source'),
             'appliances' => Input::get('appliances'),

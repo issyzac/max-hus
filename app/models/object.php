@@ -18,5 +18,6 @@ class Object extends Eloquent {
     protected  $guarded = array('$id');
 
 
+
 }
 

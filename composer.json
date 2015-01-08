@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"0x46616c6b/etherpad-lite-client": "dev-master",
-		"intervention/image": "~2.0"
+		"intervention/image": "~2.0",
+		"kartik-v/bootstrap-fileinput": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

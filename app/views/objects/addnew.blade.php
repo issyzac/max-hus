@@ -14,7 +14,7 @@
 
          <div class="panel-body">
 
-            <form class="form" action='{{ url("addnew") }}' method="post">
+            <form role="form" action="{{URL::to('addnew')}}" method="post" class="form" enctype="multipart/form-data">
 
                         <div class="form-group col-lg-6">
                             <label >Item Type</label>
@@ -30,7 +30,15 @@
                             <br>
                             <textarea  class="form-control" rows="3" placeholder="Description" name="description" id="description"> </textarea>
                         </div>
-                        <br><br><br><br><br><br><br><br><br><br>
+
+                         <!--
+                            //Scenario 3: AJAX based uploads with initial preview and initial preview delete URL.
+                            //The `overwriteInitial` property is set to false.
+                         -->
+
+                        <input id="input-702" name="kartik-input-702" type="file" multiple=true class="file-loading" data-upload-url="/site/file-upload" data-max-file-count="10">
+
+                        <br><br><br><br><br>
                         <label class="pull-left" style="margin-left: 18px"> ADDITIONAL DETAIL </label> <br><br>
                         <div class="form-group col-lg-4">
                             <label>Ac</label>
@@ -116,13 +124,40 @@
                             <label >Parking Type</label>
                             <input type="text" class="form-control" name="parking_types" id="parking_types" placeholder="">
                         </div>
-                            <button type="submit" class="btn btn-success pull-right" style="margin-top: 50px">Submit</button>
+
+                        <div class="form-group col-lg-12">
+                            <input id="file-1" class="file" type="file" name="file-1"  multiple=true data-preview-file-type="any">
+                        </div>
+
+                            <button type="submit" class="btn btn-success pull-right" style="margin-top: 20px">Submit</button>
 
 
             </form>
          </div>
 
      </div>
+
+     <script src="{{ asset('js/jquery.js') }}"></script>
+     <script src="{{ asset('js/fileinput.js') }}"></script>
+     <script src="{{ asset('js/fileinput.min.js') }}"></script>
+
+
+     <script>
+
+     $("#file-1").fileinput({
+             uploadUrl: '#',
+             allowedFileExtensions : ['jpg', 'png','gif'],
+             overwriteInitial: false,
+             maxFileSize: 1000,
+             maxFilesNum: 10,
+             allowedFileTypes: ['image', 'video', 'flash'],
+             slugCallback: function(filename) {
+                 return filename.replace('(', '_').replace(']', '_');
+             }
+     	});
+
+     </script>
+
 
 
   @stop

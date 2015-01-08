@@ -6,17 +6,15 @@
 		<meta name=description content="">
 		<meta name=viewport content="width=device-width, initial-scale=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<!-- Referencing Bootstrap CSS that is hosted locally -->
+
     	{{ HTML::style('css/bootstrap.min.css') }}
+         <link href="{{ asset('css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
+    	 <script src="{{ asset('js/jquery.min.js') }}"></script>
+    	 <script src="{{ asset('js/fileinput.js') }}"></script>
+         <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
 
-    	 <link href="{{ asset('assets/advanced-datatable/media/css/demo_page.css') }}" rel="stylesheet">
-         <link href="{{ asset('assets/advanced-datatable/media/css/demo_table.css') }}" rel="stylesheet">
-         <link href="{{ asset('assets/data-tables/DT_bootstrap.css') }}" rel="stylesheet">
-    	
-   
-    	<link rel="stylesheet" href="" >
-
-    	<script src="{{ asset('js/jquery.js') }}"></script>
       
 </head>
 <header>
