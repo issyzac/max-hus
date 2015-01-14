@@ -111,6 +111,7 @@ class ObjectController extends \BaseController {
             'lot_dimentions' => Input::get('lot_dimentions'),
             'mello_rooms' => Input::get('mello_rooms'),
             'parking_types' => Input::get('parking_types'),
+            'location' => Input::get('location'),
         ));
 
         $objects = Object::all();

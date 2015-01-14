@@ -124,12 +124,16 @@
                             <label >Parking Type</label>
                             <input type="text" class="form-control" name="parking_types" id="parking_types" placeholder="">
                         </div>
+                        <div class="form-group col-lg-4">
+                            <label >Location</label>
+                            <input type="text" class="form-control" name="location" id="location" placeholder="">
+                        </div>
 
                         <div class="form-group col-lg-12">
                             <input id="file-1" class="file" type="file" name="file-1"  multiple=true data-preview-file-type="any">
                         </div>
 
-                            <button type="submit" class="btn btn-success pull-right" style="margin-top: 20px">Submit</button>
+                        <button type="submit" class="btn btn-success pull-right" style="margin-top: 20px">Submit</button>
 
 
             </form>
@@ -145,7 +149,7 @@
      <script>
 
      $("#file-1").fileinput({
-             uploadUrl: '#',
+             uploadUrl: "' . Url::to(['addnew']) . '",
              allowedFileExtensions : ['jpg', 'png','gif'],
              overwriteInitial: false,
              maxFileSize: 1000,

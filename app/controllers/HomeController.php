@@ -20,4 +20,40 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        //
+        $object = Object::all();
+        $object->toarray();
+
+        $idadi = sizeof($object);
+
+        //var_dump($idadi);
+
+
+
+        return View::make('home' , compact('object') );
+
+    }
+
+    public function editAbout(){
+
+        echo "I will edit your about";
+        exit;
+
+    }
+
+    public function editContact(){
+
+        echo "I will edit your contacts";
+        exit;
+
+    }
+
+
 }

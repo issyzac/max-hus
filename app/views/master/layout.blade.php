@@ -10,7 +10,11 @@
 		<!-- Referencing Bootstrap CSS that is hosted locally -->
 
     	{{ HTML::style('css/bootstrap.min.css') }}
+    	 <link href="{{ asset('assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
          <link href="{{ asset('css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
+         <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
+
+
     	 <script src="{{ asset('js/jquery.min.js') }}"></script>
     	 <script src="{{ asset('js/fileinput.js') }}"></script>
          <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
@@ -120,7 +124,11 @@
 
 	    <ul class="nav navbar-nav navbar-right">
 
-	        <a class="btn btn-success"><i class="glyphicon glyphicon-user"> </i> users </a>
+	        <a href="{{ url('edit_about') }}" class="btn btn-success"><i class="fa fa-hacker-news"> </i> About </a>
+
+	        <a href="{{ url('edit_contact') }}" class="btn btn-success"><i class="fa fa-phone"> </i> Contact </a>
+
+	        <a href="" class="btn btn-success"><i class="glyphicon glyphicon-user"> </i> users </a>
 
 	        <a href="{{ url('list_objects') }}" class="btn btn-success"><i class="glyphicon glyphicon-list"> </i> list </a>
 
@@ -158,7 +166,7 @@
 
         <div class="col-md-3">
             <div class="panel-heading">
-                <h4 style="color: gray "><b>About Us</b></h4>
+                <h4 style="color: gray "><b>Testimonials</b></h4>
             </div>
             <div class="panel-body">
                 <p style="color: gray">

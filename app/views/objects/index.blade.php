@@ -39,7 +39,7 @@
                     <tr>
                         <td>{{ $i++  }}</td>
                         <td>{{ $obj->type }}</td>
-                        <td>{{ $obj->entry_location }}</td>
+                        <td>{{ $obj->location }}</td>
                         <td>{{ $obj->mello_rooms }}</td>
                         <td>{{ $obj->created_at }}</td>
                         <td>{{ $obj->updated_at }}</td>

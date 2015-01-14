@@ -1,39 +1,10 @@
-body {
-	font-size: 14px;
-	background: #F2F4F5;
-	
 
-}
-<style>
-    
-    .header {
-        background-color: #F5F5F5;
-        color: #36A0FF;
-        height: 70px;
-        font-size: 27px;
-        padding: 10px;
-    }
-    .list1{
-
-    	color: #000000;
-    }
-    /* Flexible iFrame */
-
-.Flexible-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
+#center-image{
+    width: 300px;
+    width: 300px;
+    margin: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
     overflow: hidden;
-}
 
-.Flexible-container iframe,   
-.Flexible-container object,  
-.Flexible-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
 }
-</style>

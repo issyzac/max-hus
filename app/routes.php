@@ -11,19 +11,16 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
+//Homepage Routes
+
+Route::get('/', array('uses' => 'HomeController@index'));
+Route::get('home', array('uses' => 'HomeController@index'));
+Route::get('edit_about', array('uses' => 'HomeController@editAbout'));
+Route::get('edit_contact', array('uses' => 'HomeController@editContact'));
 
 Route::get('etherpad', function()
 {
    return View::make('Pad.etherpad');
-});
-
-Route::get('home/', function()
-{
-    return View::make('home');
 });
 
 Route::get('list_objects', function()

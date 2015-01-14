@@ -9,15 +9,11 @@
  */ ?>
 
 @section('content')
-<img src="img/forent.jpg" class="img-responsive" alt=" ">
-<div class="container">
-
+<div class="container" style="margin-top: 0px">
 	<div class="page-header">
   		<h1>Rental Villa, Property ID: RH1001</h1>
 	</div>
-
 	<div class="row">
-
     <div class="col-md-8" role="main">
       <div id="carousel1" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -60,14 +56,10 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+    </div>
 
- <div class="col-lg-12">
-
-      <div class="col-lg-12 pull-left">
-
-         <h3>Property Details</h3>
-
-        <p>
+    <div class="col-md-4 pull-right"><h3>Property Details</h3><hr/>
+         <p class="hidden">
             Lorem ipsum dolor sit amet, consectetuer adipiscing
             elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
@@ -76,103 +68,15 @@
             et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi
             Nam liber tempor cum soluta nobis eleifend.
         </p>
-      </div>
-      <br>
-      <br>
-     <div class="col-md-6">
-          <h4>Additional Details</h4>
-          <hr/>
-     </div>
-    <div class="col-lg-12">
 
-      <div class="col-md-6">
-        <p><b>AC:</b> Ceiling Fan(s), Central </p>
-      </div>
-      <div class="col-md-6">
-        <p><b>ACRES:</b> Ceiling Fan(s), Central </p>
-      </div> 
-      <div class="col-md-6">
-        <p><b>ACRES SOURCE:</b>Assessor</p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>AP #:</b> 374-493-13 </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>APPLIANCECS:</b>
-        Dishwasher, Freestanding Gas Range, Garbage Disposal, Microwave</p>
-      </div>
-      <div class="col-md-6">
-        <p><b>BATHROOM DESCRIPTION:</b> Stall Shower </p>
-      </div>
-      <div class="col-md-6">
-        <p><b>BEDROOM FEATURES:</b> Main Floor Master Bedroom </p>
-      </div>
-      <div class="col-md-6">
-        <p><b>CROSS STREETS:</b>  Lincoln and Anchor</p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>DINING AREA:</b> Family Kitchen </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>DISABILITY ACCESS:</b> 36 inch or more wide halls, Doors - Swing in, 
-          Entry Slope less than 1 foot, Grab Bars in Bathroom(s), 
-          Wheelchair Accessible, Wheelchair Adaptable, Wheelchair Modifications </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>ENCLOSED YARD:</b>  Wood </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>ENTRY LOCATION:</b> Ground Level - no steps</p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>EXTERIOR CONSTRUCTION:</b>  Stucco</p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>FLOORS:</b>Ceramic Tile, Wall-to-Wall Carpet</p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>HEAT:</b> Forced Air </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>LOT DESCRIPTION:</b> Curbs-Walks</p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>LOT DIMENSIONS:</b>  70x100 </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>LOT SIZE SOURCE:</b>  Assessor </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>MELLO ROOS:</b> No </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>MISC INTERIOR:</b>  Recessed Lighting </p>
-
-      </div>
-      <div class="col-md-6">
-        <p><b>PARKING TYPE:</b> Direct Garage Access, Driveway, Garage Door Opener</p>
-
-      </div>
-      <div class="col-md-6">
+        <div class="col-md-12 ">
         <p>Features</p>
-          <ul class="list-inline">
-            <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>2 stories</li>
+          <ul class="list-unstyled col-md-offset-4">
+            <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>2 stores</li>
             <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Fire Place</li>
             <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Lawn</li>
+            <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>3 Bed Rooms</li>
+            <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Front Yard</li>
             <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Central Heating</li>
             <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Home Theater</li>
             <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Laundry Room</li>
@@ -180,52 +84,105 @@
           </ul>
         <hr/>
         </div>
-      </div>
-       </div>
     </div>
-    <div class="col-md-4 pull-right"><h3>Featured Properties</h3><hr/>
-      <div class="thumbnail">
 
-      <H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Rent </H4>
+     <div class="col-md-12">
 
-              <img src="img/one.jpg" alt=" " style="margin-top: 10px">
-              <div class="caption">
-                <h3>NO 2A,Juwata Area C Dodoma</h3>
-                <p>Cras justo odio, dapibus ac facilisis in,egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus. 
-                  <a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
-              </div>
-      </div>
-      <div class="thumbnail">
+         <div class="col-md-6">
+              <h4>Additional Details</h4>
+              <hr/>
+         </div>
+        <div class="col-lg-12">
 
-       <H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Sale </H4>
+          <div class="col-md-4">
+            <p><b>AC:</b> Ceiling Fan(s), Central </p>
+          </div>
+          <div class="col-md-4">
+            <p><b>ACRES:</b> Ceiling Fan(s), Central </p>
+          </div>
+          <div class="col-md-4">
+            <p><b>ACRES SOURCE:</b>Assessor</p>
 
-              <img src="img/2.jpg" alt=" " style="margin-top: 10px">
-              <div class="caption">
-                <h3>NO 1A,Juwata Area C Dodoma</h3>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus.
-                  <a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
-              </div>
+          </div>
+          <div class="col-md-4">
+            <p><b>AP #:</b> 374-493-13 </p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>APPLIANCECS:</b>
+            Dishwasher, Freestanding Gas Range, Garbage Disposal, Microwave</p>
+          </div>
+          <div class="col-md-4">
+            <p><b>BATHROOM DESCRIPTION:</b> Stall Shower </p>
+          </div>
+          <div class="col-md-4">
+            <p><b>BEDROOM FEATURES:</b> Main Floor Master Bedroom </p>
+          </div>
+          <div class="col-md-4">
+            <p><b>CROSS STREETS:</b>  Lincoln and Anchor</p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>DINING AREA:</b> Family Kitchen </p>
+
+          </div>
+          <div class="col-md-4 pull-left">
+            <p><b>DISABILITY ACCESS:</b> 36 inch or more wide halls, Doors - Swing in,
+              Entry Slope less than 1 foot, Grab Bars in Bathroom(s),
+              Wheelchair Accessible, Wheelchair Adaptable, Wheelchair Modifications </p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>ENCLOSED YARD:</b>  Wood </p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>ENTRY LOCATION:</b> Ground Level - no steps</p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>EXTERIOR CONSTRUCTION:</b>  Stucco</p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>FLOORS:</b>Ceramic Tile, Wall-to-Wall Carpet</p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>HEAT:</b> Forced Air </p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>LOT DESCRIPTION:</b> Curbs-Walks</p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>LOT DIMENSIONS:</b>  70x100 </p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>LOT SIZE SOURCE:</b>  Assessor </p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>MELLO ROOS:</b> No </p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>MISC INTERIOR:</b>  Recessed Lighting </p>
+
+          </div>
+          <div class="col-md-4">
+            <p><b>PARKING TYPE:</b> Direct Garage Access, Driveway, Garage Door Opener</p>
+
           </div>
 
-      <div class="thumbnail">
-
-       <H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Rent </H4>
-
-              <img src="img/3.jpg" alt=" " style="margin-top: 10px">
-              <div class="caption">
-                <h3>NO 1B,Juwata Area C Dodoma</h3>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                  Donec id elit non mi porta gravida at eget metus.
-                  <a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
-              </div>
           </div>
     </div>
+
   </div>
+ <hr/>
 </div>
-<hr/>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     {{ HTML::script('js/bootstrap.min.js') }}

@@ -20,6 +20,7 @@ class CreateObjectsTable extends Migration {
             $table->string('type');
             $table->string('description');
             $table->string('imagesUrl');
+            $table->string('location');
             $table->string('Ac');
             $table->string('acres_source');
             $table->string('appliances');

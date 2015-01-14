@@ -65,107 +65,31 @@
 
 	<hr/>
 
-		<div class="row" style="margin-top: 50px">
+		<div class="row">
 
-  			<div class="col-sm-6 col-md-4">
+		@foreach($object as $Mobject)
 
-                <div class="thumbnail">
 
-                <H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Sale </H4>
+            <div class="col-sm-6 col-md-4" >
 
-                    <img src="img/one.jpg" alt=" " style="margin-top: 10px">
+                <div class="thumbnail" style="padding-bottom: 20px;" id="center-image">
+
+                <H4 class="btn btn-default" disabled="disabled" style="margin-top: 5px"> <i class="glyphicon glyphicon-tag"> </i>  Sale </H4>
+
+                   <img src="{{ url(''.$Mobject->imagesUrl) }}" alt="/assets/images/0yWbzrf1SViY_hgames.jpg" id="center-image" style="margin-top: 10px">
 
                     <div class="caption">
-                        <h4>NO 1A,Juwata Area C Dodoma</h4>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                            Donec id elit non mi porta gravida at eget metus.
-                            <a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
+                        <h4>{{ $Mobject->location }}</h4>
+                        <p>
+                            <a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 0px"> More Details </a>
                     </div>
-                </div>
+                </div><br><br>
 
-  			</div>
-  			
-  			<div class="col-sm-6 col-md-4">
-    			<div class="thumbnail">
+            </div>
 
-    			<H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Sale </H4>
+        @endforeach
 
-      				<img src="img/2.jpg" alt=" " style="margin-top: 10px">
-      				<div class="caption">
-        				<h4>NO 1A,Juwata Area C Dodoma</h4>
-        				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-        	 				Donec id elit non mi porta gravida at eget metus. 
-        					<a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
-      				</div>
-    			</div>
-  			</div>
 
-  			<div class="col-sm-6 col-md-4">
-    			<div class="thumbnail">
-
-    			<H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Rent </H4>
-
-      				<img src="img/3.jpg" alt=" " style="margin-top: 10px">
-      				<div class="caption">
-        				<h4>NO 1B,Juwata Area C Dodoma</h4>
-
-        				<p style="color: gray" >
-        				    Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-        	 				Donec id elit non mi porta gravida at eget metus. 
-        					<a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
-        			    </p>
-
-      				</div>
-    			</div>
-  			</div>
-
-  			<div class="col-sm-6 col-md-4">
-    			<div class="thumbnail">
-
-    			<H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Sale </H4>
-
-      				<img src="img/4.jpg" alt=" " style="margin-top: 10px">
-      				<div class="caption">
-        				<h4>NO 2B,Juwata Area C Dodoma</h4>
-        				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-        	 				Donec id elit non mi porta gravida at eget metus. 
-        					<a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
-      				</div>
-    			</div>
-  			</div>
-
-  			<div class="col-sm-6 col-md-4">
-    			<div class="thumbnail">
-
-    			<H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Rent </H4>
-
-      				<img src="img/5.jpg" alt=" " style="margin-top: 10px">
-      				<div class="caption">
-        				<h4>NO 3B,Juwata Area C Dodoma</h4>
-        				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-        	 				Donec id elit non mi porta gravida at eget metus. 
-        					<a href="{{ url('rental') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
-        				</p>
-      				</div>
-    			</div>
-  			</div>
-
-  			<div class="col-sm-6 col-md-4">
-    			<div class="thumbnail">
-
-    			<H4 class="btn btn-default" disabled="disabled" style="margin-top: 0px"> <i class="glyphicon glyphicon-tag"> </i>  Sale </H4>
-
-      				<img src="img/6.jpg" alt=" " style="margin-top: 10px">
-      				<div class="caption">
-        				<h4>NO 4B,Juwata Area C Dodoma</h4>
-        				<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-        	 				Donec id elit non mi porta gravida at eget metus.
-
-        	 				<a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 10px"> More Details </a>
-        				</p>
-      				</div>
-    			</div>
-  			</div>
 
 		</div>
 

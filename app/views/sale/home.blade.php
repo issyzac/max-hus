@@ -184,66 +184,7 @@
        </div>
      </div>
      <div class="col-md-4"><h3>Featured Properties</h3><hr/>
-       <div class="thumbnail">
-               <img src="img/one.jpg" alt=" ">
-               <div class="caption">
-                 <h3>NO 2A,Juwata Area C Dodoma</h3>
-                 <p>Cras justo odio, dapibus ac facilisis in,egestas eget quam.
-                   Donec id elit non mi porta gravida at eget metus.
-                   <a href="#" > More Details >> </a> </p>
-                 <p><button type="button" class="btn btn-danger" disabled="disabled">For Rent</button></p>
-               </div>
-       </div>
-       <div class="thumbnail">
-               <img src="img/2.jpg" alt=" ">
-               <div class="caption">
-                 <h3>NO 1A,Juwata Area C Dodoma</h3>
-                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                   Donec id elit non mi porta gravida at eget metus.
-                   <a href="#" > More Details >> </a> </p>
-                 <p><p><button type="button" class="btn btn-danger" disabled="disabled">For Sale</button></p></p>
-               </div>
-           </div>
-       <div class="thumbnail">
-               <img src="img/3.jpg" alt=" ">
-               <div class="caption">
-                 <h3>NO 1B,Juwata Area C Dodoma</h3>
-                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                   Donec id elit non mi porta gravida at eget metus.
-                   <a href="#" > More Details >> </a> </p>
-                 <p><p><button type="button" class="btn btn-danger" disabled="disabled">For Rent</button></p></p>
-               </div>
-           </div>
-       <div class="thumbnail">
-               <img src="img/4.jpg" alt=" ">
-               <div class="caption">
-                 <h3>NO 2B,Juwata Area C Dodoma</h3>
-                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                   Donec id elit non mi porta gravida at eget metus.
-                   <a href="#" > More Details >> </a> </p>
-                 <p><p><button type="button" class="btn btn-danger" disabled="disabled">For Rent</button></p></p>
-               </div>
-           </div>
-       <div class="thumbnail">
-               <img src="img/5.jpg" alt=" ">
-               <div class="caption">
-                 <h3>NO 3B,Juwata Area C Dodoma</h3>
-                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                   Donec id elit non mi porta gravida at eget metus.
-                   <a href="#" > More Details >> </a> </p>
-                 <p><p><button type="button" class="btn btn-danger" disabled="disabled">For Sale</button></p></p>
-               </div>
-           </div>
-       <div class="thumbnail">
-               <img src="img/6.jpg" alt=" ">
-               <div class="caption">
-                 <h3>NO 4B,Juwata Area C Dodoma</h3>
-                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                   Donec id elit non mi porta gravida at eget metus.<a href="#" > More Details >> </a>
-                 </p>
-                 <p><p><button type="button" class="btn btn-danger" disabled="disabled">For Sale</button></p></a></p>
-               </div>
-           </div>
+
      </div>
    </div>
  </div>
