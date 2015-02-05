@@ -27,7 +27,9 @@
 	
     <div class="row">
         <div class="col-md-6">
+
             <div class="well well-sm">
+
                 <form class="form-horizontal" method="post">
                     <fieldset>
                         <legend class="text-center header">Contact us</legend>

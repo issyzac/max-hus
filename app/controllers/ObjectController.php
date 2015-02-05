@@ -130,7 +130,35 @@ class ObjectController extends \BaseController {
 	public function show($id)
 	{
 		//
+        $mobj = Object::find($id);
+        //var_dump(sizeof($mobj));
+        //exit;
+
+        return View::make('Rent.home', compact('mobj'));
+
 	}
+
+    /**
+     * Function to return all the rental buildings
+     */
+    public function forent(){
+       //
+
+        $object = Object::where("misc_interior", "0")->get();
+        $object->toarray();
+        return View::make('home' , compact('object') );
+    }
+
+
+    /**
+     * Function to return all the sold buildings
+     */
+    public function forsale(){
+       //
+        $object = Object::where("misc_interior", "1")->get();
+        $object->toarray();
+        return View::make('home' , compact('object') );
+    }
 
 
 	/**

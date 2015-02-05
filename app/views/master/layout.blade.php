@@ -9,15 +9,11 @@
 
 		<!-- Referencing Bootstrap CSS that is hosted locally -->
 
-    	{{ HTML::style('css/bootstrap.min.css') }}
+    	 <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
     	 <link href="{{ asset('assets/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
          <link href="{{ asset('css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css" />
          <link href="{{ asset('css/style.css') }}" media="all" rel="stylesheet" type="text/css" />
 
-
-    	 <script src="{{ asset('js/jquery.min.js') }}"></script>
-    	 <script src="{{ asset('js/fileinput.js') }}"></script>
-         <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
 
       
 </head>
@@ -26,12 +22,6 @@
 	<nav class="navbar navbar-inverse" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
 			<a href="/" class="navbar-brand">MAX HUS SVERIGE</a>
 		</div>
 
@@ -40,9 +30,13 @@
 
 			<ul class="nav navbar-nav navbar-right">
 
-			    <li><a href="{{ url('etherpad') }}">Etherpad</a></li>
+			    <li><a href="{{ url('etherpad') }}">
+			    <i class="glyphicon glyphicon-edit"></i>
+			    Etherpad</a></li>
 
-				<li class="active"><a href="{{ url('home') }}">Home</a></li>
+				<li class="active"><a href="{{ url('home') }}">
+				<i class="glyphicon glyphicon-home"></i>
+				Home</a></li>
 
 				<li><a href="{{ url('forent') }}">For Rent</a></li>
 
@@ -59,12 +53,19 @@
                       </ul>
                 </li>
 
-				<li><a href="./contactus">Contact</a></li>
+				<li><a href="./contactus"><i class="glyphicon glyphicon-phone"></i>Contact</a></li>
 
-				<li><a href="#" data-toggle="modal" data-target="#myModal">Log in</a></li>
+                 @if((Auth::guest()))
+                  <li><a href="#" data-toggle="modal" data-target="#myModal">
+                  <i class="glyphicon glyphicon-log-in"></i>Login</a></li>
+                 @else
+                  <li><a  href="{{ url('logout') }}"> <i class="glyphicon glyphicon-log-out"></i>
+                  Logout {{ Auth::user() -> username }}</a></li>
+                 @endif
+
 
 				<!-- Modal -->
-					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div style="margin-top: 40px" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   					<div class="modal-dialog">
     					<div class="modal-content">
       					<div class="modal-header">
@@ -75,40 +76,40 @@
       					</div>
 
       			    <div class="modal-body">
-        					<form id="registrationForm" method="post" class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Username</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="username" />
-                        </div>
-                    </div>
+      			           <div class="response"></div>
+                            <div class="loginForm">
 
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Email address</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" name="email" />
-                        </div>
-                    </div>
+                                <form action="{{URL::to('login')}}" id="registrationForm" method="post" class="form-horizontal">
 
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label">Password</label>
-                        <div class="col-sm-5">
-                            <input type="password" class="form-control" name="password" />
-                        </div>
-                    </div>
+                                <div class="alert alert-danger avatar_alert" role="alert" style="display: none">
+                                       <ul></ul>
+                                </div>
+                                <ul></ul>
+                                  {{--{{ Hash::make('1234'); }}--}}
+                                    <div class="form-group">
+                                        <label for="avatar_src" class="col-sm-3 control-label">Username</label>
+                                        <div class="col-sm-5">
+                                            <input type="text" class="form-control" required="required" name="username" id="username"/>
+                                        </div>
+                                    </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-9 col-sm-offset-3">
-                            <!-- Do NOT use name="submit" or id="submit" for the Submit button -->
-                            <button type="button" class="btn btn-primary">Log In</button>
-                        </div>
-                    </div>
-                    <p class="text-center">Dont you have an account? <a href=" "> Sign Up >> </a> </p>
-                </form>	
-      			    </div>
-      	        <div class="modal-footer">
-        			    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        			    
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label">Password</label>
+                                        <div class="col-sm-5">
+                                            <input type="password" class="form-control" required="required" name="password" id="password"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group modal-footer">
+                                         <div class="col-sm-9 col-sm-offset-3">
+                                             <!-- Do NOT use name="submit" or id="submit" for the Submit button -->
+                                             <p class="pull-left text-center">Already registered? <a href="#loginForm"> Register >> </a> </p>
+                                             <button type="submit" class=" btn btn-primary" id="loginbtn" >Log In</button>
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                         </div>
+                                     </div>
+                                </form>
+                            </div>
       			    </div>
     			    </div>
   			    </div>
@@ -119,6 +120,8 @@
 		</div>
 	
 	</nav>
+
+	@if(!(Auth::guest()))
 
 	<div class="container" style="height: 30px; background-color: white; margin-top: 0px; margin-bottom: 30px">
 
@@ -138,6 +141,8 @@
 
 	</div>
 
+    @endif
+
 	<!-- <hr style="margin-left: 50px; margin-right: 50px "/> -->
 
 </header>
@@ -151,7 +156,7 @@
 
     <div class="row">
 
-    <div class="col-md-3">
+    <div class="col-md-4">
                 <div class="panel-heading">
                     <h4 style="color: gray"><b>About Us</b></h4>
                 </div>
@@ -164,34 +169,29 @@
                 </div>
             </div>
 
-        <div class="col-md-3">
-            <div class="panel-heading">
-                <h4 style="color: gray "><b>Testimonials</b></h4>
-            </div>
-            <div class="panel-body">
-                <p style="color: gray">
-                    we are the best in selling houses,we provide the best services....Look at our Latest
-                    listed properties and check out the facilities on them, We have already sold more than
-                    5,000 Homes and we are still going at very good pace. We would love you to look into
-                </p>
-            </div>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="panel-heading">
                 <h4 style="color: gray"><b>Recent Posts</b></h4>
             </div>
             <div class="panel-body">
-                <ul class="list-unstyled" style="color: gray" >
-                    <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span>   House No.3B, Juwata Area C </li>
-                    <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span>   House No.2B, Juwata Area A </li>
-                    <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span>   House No.4B, Juwata Area B </li>
-                    <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span>   House No.13B, Juwata Area E </li>
-                    <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span>   House No.41B, Juwata Area D </li>
+            <?php
+             $objects = Object::all();
+             $objects->toarray();
+             $flag =  0;
+             ?>
+             <ul class="list-unstyled" style="color: gray" >
+             <?php
+             for($i = 0; $i<5; $i++){
+              ?>
+                <li><span class="glyphicon glyphicon-play" aria-hidden="true"></span> House No. {{ $objects[$i]->id }} , {{ $objects[$i] -> location }} </li>
+              <?php
+             }
+             ?>
+             </ul>
 
-                </ul>
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="panel-heading">
                 <h4 style="color: gray"><b>Contact Us</b></h4>
             </div>
@@ -211,17 +211,45 @@
         <p class="text-center" style="color: gray">Copyright &copy; 2014 Max-Hus Sverige </p>
 </div>
 </div>
-    
-    <!-- Referencing Bootstrap JS that is hosted locally -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <!-- Latest compiled and minified JavaScript -->
-	
-    {{ HTML::script('js/bootstrap.min.js') }}
+     <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
+     {{--<script src="{{ asset('js/loginout.js') }}" type="text/javascript"></script>--}}
+     {{--<script src="{{ asset('js/loginjsfile.js') }}" type="text/javascript"></script>--}}
+     <script src="{{ asset('js/fileinput.js') }}" type="text/javascript"></script>
+     <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
+     <script>
+     $('.dropdown-toggle').dropdown()
+     </script>
+
     <script>
-    $('.dropdown-toggle').dropdown()
+        $(document).on('submit', '#registrationForm', function(event){
+
+//            alert("working");
+            var info = $('.avatar_alert');
+            event.preventDefault();
+            var data = { username: $("#username").val() , password: $("#password").val()};
+            $.ajax({
+                url: "login",
+                type: "POST",
+                data: data
+            }).done(function(response) {
+                    info.hide().find('ul').empty();
+                if(response.errors)
+                {
+                    $.each(response.errors, function(index, error){
+                        info.find('ul').append(error);
+                    });
+                    info.slideDown();
+                }
+                else if(response.success){
+                  window.location.href = "{{URL::to('home')}}";
+                }
+            });
+        });
     </script>
 
-   
+
 </body>
 </html>

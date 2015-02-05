@@ -18,6 +18,11 @@ class Object extends Eloquent {
     protected  $guarded = array('$id');
 
 
+    public function rentals()
+    {
+        return $this->hasMany('Object', 'misc_interior', '0');
+    }
+
 
 }
 

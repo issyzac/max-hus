@@ -32,14 +32,7 @@ Route::get('/types', function()
 {
 	return View::make('home');
 });
-Route::get('/forent', function()
-{
-	return View::make('rent');
-});
-Route::get('/forsale', function()
-{
-	return View::make('sale');
-});
+
 
 
 /**
@@ -51,12 +44,16 @@ Route::get('sale', array('uses' => 'ObjectController@sale'));
 Route::get('list_objects', array('uses' => 'ObjectController@listObjects'));
 Route::get('addnew', array('uses' => 'ObjectController@create'));
 Route::post('addnew', array('uses' => 'ObjectController@store'));
+Route::get('object/viewdetails/{id}', array('uses' => 'ObjectController@show'));
+Route::get('forent', array('uses' => 'ObjectController@forent'));
+Route::get('forsale', array('uses' => 'ObjectController@forsale'));
 
+/**
+ * login Routes Starts here
+ */
+Route::post('login', array('uses' => 'UserController@login'));
+Route::get('logout', array('uses' => 'UserController@logout'));
 
-Route::get('/login', function()
-{
-	return View::make('login');
-});
 
 Route::get('/single-family', function()
 {

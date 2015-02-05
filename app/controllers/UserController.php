@@ -12,7 +12,48 @@ class UserController extends \BaseController {
 		//
 	}
 
+    public function login()
+    {
+        // validate the info, create rules for the inputs
+        $rules = array(
+            'username' => 'required', // make sure the username is an actual username
+            'password' => 'required|alphaNum|min:3'  // password can only be alphanumeric and has to be greater than 3 characters
+        );
 
+        // run the validation rules on the inputs from the form
+        $validator = Validator::make(Input::all(), $rules);
+
+        // if the validator fails, redirect back to the form
+        if ($validator->fails()) {
+            return Response::json(array('errors' => $validator->errors()->toArray()));
+        }
+
+        else{
+            $userdata = array(
+                'username'     => Input::get('username'),
+                'password'  => Input::get('password')
+            );
+
+            // attempt to do the login
+            if (Auth::attempt($userdata)) {
+
+                // validation successful!
+                // redirect them to the secure section or whatever
+                // return Redirect::to('secure');
+                // for now we'll just echo success (even though echoing in a controller is bad)
+                return Response::json(array('success' => true));
+            }
+            else{
+                return Response::json(array('errors'=> true));
+            }
+
+        }
+    }
+
+    public function logout(){
+        Auth::logout(); // log the user out of our application
+        return Redirect::to('home'); // redirect the user to the login screen
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

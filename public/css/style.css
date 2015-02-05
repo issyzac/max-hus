@@ -8,3 +8,32 @@
     overflow: hidden;
 
 }
+
+#username_status.exists, #username_status.exists-not{
+    display: block;
+}
+#username_status > i{
+    display: none;
+    position: relative;
+    top:6px;left: 1px;
+    font-size: 18px;
+    /*width:10%;height:20px;*/
+    /*border:1px solid #000;*/
+    cursor: default;
+}
+
+#username_status i > span{
+    display: none;
+    text-align:center;
+}
+
+#username_status i:hover > span{
+    display: inline;
+}
+
+#username_status.exists >i.exists{
+    display: block;color: #6AB46A;
+}
+#username_status.exists-not >i.exists-not{
+    display: block;color:#CD0000;
+}

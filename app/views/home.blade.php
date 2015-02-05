@@ -20,7 +20,6 @@
     <div class="item">
       <img src="img/slide-two.jpg" alt="">
       <div class="carousel-caption">
-        <p>two</p>
       </div>
     </div>
     <div class="item">
@@ -74,14 +73,14 @@
 
                 <div class="thumbnail" style="padding-bottom: 20px;" id="center-image">
 
-                <H4 class="btn btn-default" disabled="disabled" style="margin-top: 5px"> <i class="glyphicon glyphicon-tag"> </i>  Sale </H4>
+                <H4 class="btn btn-default" disabled="disabled" style="margin-top: 5px"> <i class="glyphicon glyphicon-tag"> </i> @if($Mobject->misc_interior == "1") <span style="color: green"> Sale </span> @else <span style="color: orange"> Rent </span> @endif </H4>
 
                    <img src="{{ url(''.$Mobject->imagesUrl) }}" alt="/assets/images/0yWbzrf1SViY_hgames.jpg" id="center-image" style="margin-top: 10px">
 
                     <div class="caption">
                         <h4>{{ $Mobject->location }}</h4>
                         <p>
-                            <a href="{{ url('sale') }}" class="btn btn-xs btn-success pull-right" style="margin-top: 0px"> More Details </a>
+                            <a href="{{ url("object/viewdetails/{$Mobject->id}") }}" @if($Mobject->misc_interior == "1") class="btn btn-xs btn-success pull-right" @else class="btn btn-xs btn-warning pull-right" @endif style="margin-top: 0px"> More Details </a>
                     </div>
                 </div><br><br>
 
@@ -98,8 +97,5 @@
 	</section>
 
 	</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    {{ HTML::script('js/bootstrap.min.js') }}	
 
 @stop

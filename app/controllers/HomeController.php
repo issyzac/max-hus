@@ -31,6 +31,7 @@ class HomeController extends BaseController {
         $object = Object::all();
         $object->toarray();
 
+
         $idadi = sizeof($object);
 
         //var_dump($idadi);

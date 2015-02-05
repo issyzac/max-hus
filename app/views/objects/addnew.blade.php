@@ -12,7 +12,7 @@
 
   <div class="container">
 
-         <div class="panel-body">
+         <div class="panel-body well well-lg">
 
             <form role="form" action="{{URL::to('addnew')}}" method="post" class="form" enctype="multipart/form-data">
 
@@ -24,21 +24,12 @@
                             <label>Item ID</label>
                             <input type="text" class="form-control" name="aidi" id="aidi" readonly placeholder="Id">
                         </div>
-
                         <div class="form-group col-lg-6">
                             <label> Object Description</label>
                             <br>
                             <textarea  class="form-control" rows="3" placeholder="Description" name="description" id="description"> </textarea>
                         </div>
-
-                         <!--
-                            //Scenario 3: AJAX based uploads with initial preview and initial preview delete URL.
-                            //The `overwriteInitial` property is set to false.
-                         -->
-
-                        <input id="input-702" name="kartik-input-702" type="file" multiple=true class="file-loading" data-upload-url="/site/file-upload" data-max-file-count="10">
-
-                        <br><br><br><br><br>
+                        <br><br><br><br><br><br><br><br><br><br>
                         <label class="pull-left" style="margin-left: 18px"> ADDITIONAL DETAIL </label> <br><br>
                         <div class="form-group col-lg-4">
                             <label>Ac</label>
@@ -137,6 +128,7 @@
 
 
             </form>
+
          </div>
 
      </div>
