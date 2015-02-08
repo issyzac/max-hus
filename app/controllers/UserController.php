@@ -62,6 +62,43 @@ class UserController extends \BaseController {
 	public function create()
 	{
 		//
+
+        //The role of the user by default is 0
+        $role = 0;
+
+        $rules = array(
+            'fname'        => 'required', 						   // just a normal required validation
+            'mname'        => 'required', 						   // just a normal required validation
+            'lname'        => 'required', 						   // just a normal required validation
+            'uname'        => 'required', 						   // just a normal required validation
+            'email'            => 'required|email', 	                   // required and must be unique
+            'pnumber'          => 'required',
+            'password'         => 'required'
+        );
+
+        // run the validation rules on the inputs from the form
+        $validator = Validator::make(Input::all(), $rules);
+
+        // if the validator fails, redirect back to the form
+        if ($validator->fails()) {
+            //return Response::json(array('success' => true));
+            return Response::json(array('errors' => $validator->errors()->toArray()));
+        }
+        else{
+            $newUsuer = User::create(array(
+                'password' => Hash::make(Input::get('password')),
+                'firstName' => Input::get('fname'),
+                'middleName' => Input::get('mname'),
+                'lastName' => Input::get('lname'),
+                'username' => Input::get('uname'),
+                'email' => Input::get('email'),
+                'phoneNumber' => Input::get('pnumber'),
+                'role' => $role
+            ));
+
+            return Response::json(array('good' => "Successfully Registered"));
+        }
+
 	}
 
 

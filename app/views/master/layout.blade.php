@@ -22,7 +22,7 @@
 	<nav class="navbar navbar-inverse" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<a href="/" class="navbar-brand">MAX HUS SVERIGE</a>
+			<a href="/" class="navbar-brand">PICCOLOHUS</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -30,9 +30,9 @@
 
 			<ul class="nav navbar-nav navbar-right">
 
-			    <li><a href="{{ url('etherpad') }}">
-			    <i class="glyphicon glyphicon-edit"></i>
-			    Etherpad</a></li>
+			    {{--<li><a href="{{ url('etherpad') }}">--}}
+			    {{--<i class="glyphicon glyphicon-edit"></i>--}}
+			    {{--Etherpad</a></li>--}}
 
 				<li class="active"><a href="{{ url('home') }}">
 				<i class="glyphicon glyphicon-home"></i>
@@ -53,7 +53,7 @@
                       </ul>
                 </li>
 
-				<li><a href="./contactus"><i class="glyphicon glyphicon-phone"></i>Contact</a></li>
+				<li><a href="{{ url('contact') }}"><i class="glyphicon glyphicon-phone"></i>Contact</a></li>
 
                  @if((Auth::guest()))
                   <li><a href="#" data-toggle="modal" data-target="#myModal">
@@ -72,14 +72,16 @@
         					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
         						<span class="sr-only">Close</span>
         					</button>
-        						<h4 class="modal-title text-center" id="myModalLabel">Log In</h4>
+        						<h4 class="modal-title text-center form-header" id="myModalLabel">Login</h4>
       					</div>
 
       			    <div class="modal-body">
-      			           <div class="response"></div>
-                            <div class="loginForm">
 
-                                <form action="{{URL::to('login')}}" id="registrationForm" method="post" class="form-horizontal">
+      			           {{--This is the Login form div--}}
+
+                            <div class="Login modalForm">
+
+                                <form action="{{URL::to('login')}}" id="loginForm" method="post" class="form-horizontal">
 
                                 <div class="alert alert-danger avatar_alert" role="alert" style="display: none">
                                        <ul></ul>
@@ -103,14 +105,112 @@
                                     <div class="form-group modal-footer">
                                          <div class="col-sm-9 col-sm-offset-3">
                                              <!-- Do NOT use name="submit" or id="submit" for the Submit button -->
-                                             <p class="pull-left text-center">Already registered? <a href="#loginForm"> Register >> </a> </p>
+                                             <p class="pull-left text-center">Already registered? <a href="#loginForm" onclick="switchForms('Register')"> Register >> </a> </p>
                                              <button type="submit" class=" btn btn-primary" id="loginbtn" >Log In</button>
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                          </div>
                                      </div>
                                 </form>
                             </div>
+
+                           {{--end of login form div --}}
+
+
+                           {{--Registration form--}}
+                            <div class="Register hidden modalForm">
+
+                                   <form action="{{URL::to('register')}}" id="registrationForm" method="post" class="form-horizontal">
+
+                                   <div class="alert alert-danger avatar_alert" role="alert" style="display: none">
+                                          <ul></ul>
+                                   </div>
+                                   <ul></ul>
+                                    <div class="alert alert-success avatar_success" role="alert" style="display: none">
+                                           <ul></ul>
+                                    </div>
+                                    <ul></ul>
+                                     {{--{{ Hash::make('1234'); }}--}}
+                                       <div class="form-group">
+                                           <label for="avatar_src" class="col-sm-3 control-label">First Name</label>
+                                           <div class="col-sm-5">
+                                               <input type="text" class="form-control" required="required" name="fname" id="fname"/>
+                                           </div>
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label for="avatar_src" class="col-sm-3 control-label">Middle Name</label>
+                                           <div class="col-sm-5">
+                                               <input type="text" class="form-control" required="required" name="mname" id="mname"/>
+                                           </div>
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label for="avatar_src" class="col-sm-3 control-label">Last Name</label>
+                                           <div class="col-sm-5">
+                                               <input type="text" class="form-control"  name="lname" id="lname"/>
+                                           </div>
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label for="avatar_src" class="col-sm-3 control-label">Username</label>
+                                           <div class="col-sm-5">
+                                               <input type="text" class="form-control" required="required" name="uname" id="uname"/>
+                                           </div>
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label class="col-sm-3 control-label">Password</label>
+                                           <div class="col-sm-5">
+                                               <input type="password" class="form-control" required="required" name="secretword" id="secretword"/>
+                                           </div>
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label class="col-sm-3 control-label">email</label>
+                                           <div class="col-sm-5">
+                                               <input type="email" class="form-control"  name="email" id="email"/>
+                                           </div>
+                                       </div>
+
+                                       <div class="form-group">
+                                           <label class="col-sm-3 control-label">Phone Number</label>
+                                           <div class="col-sm-5">
+                                               <input type="number" class="form-control" required="required" name="pnumber" id="pnumber"/>
+                                           </div>
+                                       </div>
+
+                                       <div class="form-group modal-footer">
+                                            <div class="col-sm-9 col-sm-offset-3">
+                                                <!-- Do NOT use name="submit" or id="submit" for the Submit button -->
+                                                <p class="pull-left text-center">Already have an account? <a href="javascript:void(0);" onclick="switchForms('Login')"> login >> </a> </p>
+                                                <button type="submit" class=" btn btn-primary" id="loginbtn" >OK</button>
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                   </form>
+                               </div>
+                           {{--end of registration form--}}
+
+                           {{--beggining of the success div--}}
+
+                         <div class="success hidden modalForm">
+
+                               <div class="alert alert-success">
+                                      <H4 class="success text-center"> Successfully Registered </H4>
+                               </div>
+
+                                  <div class="form-group modal-footer">
+                                       <div class="col-sm-9 col-sm-offset-3">
+                                           <!-- Do NOT use name="submit" or id="submit" for the Submit button -->
+                                           <button type="submit" class=" btn btn-success" id="loginbtn" onclick="switchForms('Login')">login</button>
+                                           <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                                       </div>
+                                   </div>
+                              </form>
+                          </div>
+                           {{--end of the success div--}}
       			    </div>
+
     			    </div>
   			    </div>
           </div>
@@ -122,6 +222,8 @@
 	</nav>
 
 	@if(!(Auth::guest()))
+
+	@if(Auth::user() -> role == 1)
 
 	<div class="container" style="height: 30px; background-color: white; margin-top: 0px; margin-bottom: 30px">
 
@@ -140,6 +242,7 @@
 	    </ul>
 
 	</div>
+	@endif
 
     @endif
 
@@ -208,47 +311,20 @@
         </div>
     </div>
     <hr/>
-        <p class="text-center" style="color: gray">Copyright &copy; 2014 Max-Hus Sverige </p>
+        <p class="text-center" style="color: gray"> <?php $curYear = date('Y'); ?>Copyright &copy; {{ $curYear }} Piccolohus </p>
 </div>
 </div>
 
 
     <!-- Latest compiled and minified JavaScript -->
      <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
-     {{--<script src="{{ asset('js/loginout.js') }}" type="text/javascript"></script>--}}
+     <script src="{{ asset('js/loginout.js') }}" type="text/javascript"></script>
      {{--<script src="{{ asset('js/loginjsfile.js') }}" type="text/javascript"></script>--}}
      <script src="{{ asset('js/fileinput.js') }}" type="text/javascript"></script>
      <script src="{{ asset('js/bootstrap.min.js') }}" type="text/javascript"></script>
      <script>
      $('.dropdown-toggle').dropdown()
      </script>
-
-    <script>
-        $(document).on('submit', '#registrationForm', function(event){
-
-//            alert("working");
-            var info = $('.avatar_alert');
-            event.preventDefault();
-            var data = { username: $("#username").val() , password: $("#password").val()};
-            $.ajax({
-                url: "login",
-                type: "POST",
-                data: data
-            }).done(function(response) {
-                    info.hide().find('ul').empty();
-                if(response.errors)
-                {
-                    $.each(response.errors, function(index, error){
-                        info.find('ul').append(error);
-                    });
-                    info.slideDown();
-                }
-                else if(response.success){
-                  window.location.href = "{{URL::to('home')}}";
-                }
-            });
-        });
-    </script>
 
 
 </body>

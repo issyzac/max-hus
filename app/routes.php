@@ -13,7 +13,7 @@
 
 //Homepage Routes
 
-Route::get('/', array('uses' => 'HomeController@index'));
+Route::get('/', array('as'=> 'home','uses' => 'HomeController@index'));
 Route::get('home', array('uses' => 'HomeController@index'));
 Route::get('edit_about', array('uses' => 'HomeController@editAbout'));
 Route::get('edit_contact', array('uses' => 'HomeController@editContact'));
@@ -53,6 +53,15 @@ Route::get('forsale', array('uses' => 'ObjectController@forsale'));
  */
 Route::post('login', array('uses' => 'UserController@login'));
 Route::get('logout', array('uses' => 'UserController@logout'));
+Route::post('register', array('uses' => 'UserController@create'));
+
+
+/**
+ * Contact routes
+ */
+
+Route::get('/contact', 'ContactsController@index');
+Route::post('/contact', 'ContactsController@handleFormPost');
 
 
 Route::get('/single-family', function()
